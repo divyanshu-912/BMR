@@ -1,0 +1,68 @@
+<!--Harris-Benedict Equation Based Formula
+
+ For Men: BMR = 88.362 + (13.397 x weight in kg) + (4.799 x height in cm) - (5.677 x age in years).
+ For Women: BMR = 447.593 + (9.247 x weight in kg) + (3.098 x height in cm) - (4.330 x age in years).
+
+Mifflin St Jeor Equation Based Formula(I am using this formula as this is more accurate)
+
+The Mifflin St Jeor equation based formula is considered more accurate than Harris-Benedict, especially for lean individuals.
+
+ For Men: BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) + 5.
+ For Women:BMR = (10 x weight in kg) + (6.25 x height in cm) - (5 x age in years) - 161.
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Basal Metabolic Rate</title>
+</head>
+<body>
+    <h1>Basal Metabolic Rate</h1>
+
+    <div id="form">
+        <div id="gender">
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+        
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight" placeholder="Weight in KG" required>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height" placeholder="Height in cm" required>
+        <label for="age">Age (years):</label>
+        <input type="number" id="age" name="age" placeholder="Age in years" required>
+        <div id="buttons">
+        <button id="calculate" onclick="calculateBMR()">Calculate BMR</button>
+       <button id="clear" onclick="clearform()">Clear Form</button>
+       </div>
+       <p id="result"></p>
+    </div>
+    
+    <details>
+        <summary>Click to view Importance of BMR</summary>
+        <p> <h2>WHAT IS BASAL METABOLIC RATE?</h2> 
+            Basal Metabolic Rate (BMR) is primarily the amount of energy (in calories) that your body requires to 
+            ensure that the basic or primary functions of the body are maintained while you are in a state of rest. 
+            These basic or primary functions include:
+            <ul>
+                <li>Breathing</li>
+                <li>Circulation of blood</li>
+                <li>Regulation of body temperature</li> 
+                <li>Digestion</li>
+                <li>Cellular repair and Growth</li>
+                <li>Other bodily functions</li>
+            </ul>
+            Basal Metabolic Rate is therefore the basic minimum amount of calories required to ensure that the above 
+            life-sustaining functions are carried out while our bodies are at rest, i.e., no additional activity is being carried out by the body. <a href="https://en.wikipedia.org/wiki/Basal_metabolic_rate">Click for More...</a>
+        </p>
+    </details>
+
+    <script src="main.js"></script>
+</body>
+</html>
